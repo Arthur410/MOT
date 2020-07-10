@@ -73,6 +73,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+
+.main-page .main .dream .dream2 {
+  margin-left:-2px;
+}
+
 .header .header-top {
   padding: 20px 0;
   background: rgba(225, 225, 225, 0.5);
