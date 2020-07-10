@@ -1,0 +1,1413 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  background: url(../img/bg.jpg);
+  max-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.header .header-top {
+  padding: 20px 0;
+  background: rgba(225, 225, 225, 0.5);
+}
+.header .header-top .row {
+  align-items: center;
+}
+.header .header-top .ad h1 {
+  font-size: 39px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.header .header-top .ad .item {
+  margin: 15px 0;
+  display: flex;
+  margin-top: 25px;
+}
+.header .header-top .ad .item p {
+  margin-left: 20px;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.header .header-menu {
+  background: #292b30;
+}
+.header .header-menu .nav ul {
+  display: flex;
+}
+.header .header-menu .nav ul li {
+  padding: 30px 20px;
+  transition: background 0.2s linear;
+}
+.header .header-menu .nav ul li:hover {
+  background: #c2171a;
+}
+.header .header-menu .nav ul li a {
+  font-family: "Roboto", serif;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.header .header-menu .purchase {
+  padding-top: 30px;
+  text-align: right;
+}
+.header .header-menu .purchase p {
+  color: #989898;
+  font-size: 12px;
+  font-family: "Roboto", serif;
+  line-height: 1.8;
+}
+.header .header-menu .purchase .basket {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+.header .header-menu .purchase .basket img {
+  margin-right: 40px;
+}
+.header .header-menu.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1002;
+  animation-name: fixed;
+  animation-duration: 1s;
+}
+@keyframes fixed {
+  0% {
+    opacity: 0;
+    top: -70px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+/*header*/
+.main-page {
+  padding-top: 30px;
+  /*sidebar*/
+  /*main*/
+}
+.main-page .sidebar .search {
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+}
+.main-page .sidebar .search input[type=search] {
+  background: #292b30;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Roboto", serif;
+}
+.main-page .sidebar .search input[type=search]::-webkit-input-placeholder {
+  color: #989898;
+}
+.main-page .sidebar .search input[type=search]::-moz-placeholder {
+  color: #989898;
+}
+.main-page .sidebar .search .search-icon {
+  padding: 10px 13px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  background: #c2171a;
+}
+.main-page .sidebar .search .search-icon svg {
+  fill: #fff;
+}
+.main-page .sidebar .services {
+  border: 1px solid #dedede;
+  background: #fff;
+}
+.main-page .sidebar .services .service {
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+.main-page .sidebar .services .service:before, .main-page .sidebar .services .service:after {
+  content: "";
+  width: 8px;
+  height: 2px;
+  right: 10px;
+  position: absolute;
+  background-color: #000;
+}
+.main-page .sidebar .services .service:before {
+  transform: rotate(45deg);
+  margin-top: -2.5px;
+}
+.main-page .sidebar .services .service:after {
+  transform: rotate(-45deg);
+  margin-top: 2.5px;
+}
+.main-page .sidebar .services .service svg {
+  position: absolute;
+  margin-right: 20px;
+}
+.main-page .sidebar .services .service p {
+  padding-right: 30px;
+  font-family: "Roboto Slab", serif;
+  padding-left: 50px;
+}
+.main-page .sidebar .services .service:hover .hover-content {
+  display: block;
+}
+.main-page .sidebar .services .service:hover .hover-content p {
+  color: #000;
+}
+.main-page .sidebar .services .service:hover p {
+  color: #c2171a;
+}
+.main-page .sidebar .services .service .hover-content {
+  display: none;
+  position: absolute;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+  top: -1px;
+  width: 300px;
+  right: -301px;
+  z-index: 100000;
+  background: #fff;
+  border: 1px solid #dedede;
+}
+.main-page .sidebar .services .service .hover-content p {
+  padding: 10px 0;
+  margin: 0 10px;
+  border-bottom: 1px solid #dedede;
+}
+.main-page .sidebar .services .service .hover-content p:hover {
+  color: #c2171a;
+}
+.main-page .sidebar .price {
+  margin: 50px 0;
+  text-align: center;
+  background: url(../img/price.jpg);
+}
+.main-page .sidebar .price h1 {
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 60px 0;
+  background: url(../img/price-bg2.png) center center/contain no-repeat;
+}
+.main-page .sidebar .price button {
+  font-family: "Roboto", serif;
+  color: #000;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 12px 55px;
+  margin: 30px 0;
+}
+.main-page .sidebar .price button:hover {
+  text-decoration: underline;
+}
+.main-page .sidebar .news {
+  margin-bottom: 40px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #dedede;
+}
+.main-page .sidebar .news h1 {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.main-page .sidebar .news h6 {
+  color: #b0b0b0;
+  font-size: 12px;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  margin-bottom: 3px;
+}
+.main-page .sidebar .news .new {
+  margin: 20px 0;
+}
+.main-page .sidebar .news .new p {
+  font-size: 15px;
+  color: #1d2023;
+}
+.main-page .sidebar .clause {
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+.main-page .sidebar .clause img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.main-page .main {
+  /****************************************************/
+  /**************OTHER PAGES******************/
+  /****************************************************/
+  /*about html*/
+  /*catalog.html*/
+  /*news.html*/
+  /*buyers.html*/
+  /*contacts.html*/
+}
+.main-page .main .slider img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.main-page .main .dream {
+  margin: 40px 0;
+}
+.main-page .main .dream .dream1 {
+  padding: 0;
+  background: url(../img/d1.jpg) right top/cover no-repeat;
+}
+.main-page .main .dream .dream1 h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 23px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fff;
+}
+.main-page .main .dream .dream2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: url(../img/d2.jpg) center center/cover no-repeat;
+}
+.main-page .main .dream .dream2 p {
+  margin-right: 35px;
+  text-align: right;
+  line-height: 1.4;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+}
+.main-page .main .dream .dream3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1d2023;
+}
+.main-page .main .dream .dream3 button {
+  padding: 10px 35px;
+  background: #c2171a;
+  color: #fff;
+  font-family: "Roboto", serif;
+  font-size: 16px;
+}
+.main-page .main .dream .dream3 button:hover {
+  background: #901012;
+}
+.main-page .main .about h1 {
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.main-page .main .about .info {
+  background: #fff;
+  border: 1px solid #dedede;
+  padding: 15px;
+}
+.main-page .main .about .info p {
+  margin: 10px 0;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.3;
+}
+.main-page .main .about .info p span {
+  color: #c2171a;
+  font-weight: 400;
+}
+.main-page .main .about .info h2 {
+  font-size: 24px;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  margin: 40px 0;
+}
+.main-page .main .about .info ul {
+  margin-bottom: 50px;
+}
+.main-page .main .about .info ul li {
+  display: flex;
+  align-items: center;
+}
+.main-page .main .about .info ul li:before {
+  content: "";
+  background-color: #000;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+}
+.main-page .main .about .info ul li p {
+  position: relative;
+  padding-left: 30px;
+}
+.main-page .main .about .catalog h1 {
+  margin-top: 50px;
+}
+.main-page .main .about .catalog .column {
+  text-align: center;
+  padding: 0 10px;
+  border-bottom: 1px solid #dedede;
+}
+.main-page .main .about .catalog .column p {
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  padding-bottom: 40px;
+  transition: color 0.2s linear;
+}
+.main-page .main .about .catalog .column p:hover {
+  color: #c2171a;
+}
+.main-page .main .catalog {
+  background: #fff;
+}
+.main-page .main .catalog .catalog-item {
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dedede;
+}
+.main-page .main .catalog .catalog-item p {
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  padding-bottom: 30px;
+  transition: color 0.2s linear;
+}
+.main-page .main .catalog .catalog-item p:hover {
+  color: #c2171a;
+}
+.main-page .main .news-main {
+  background: #fff;
+  border: 1px solid #dedede;
+  padding: 10px;
+}
+.main-page .main .news-main h1 {
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.main-page .main .news-main p {
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  color: #000;
+}
+.main-page .main .news-main p span {
+  cursor: pointer;
+  color: #000;
+  font-size: 18px;
+  transition: color 0.2s linear;
+}
+.main-page .main .news-main p span:hover {
+  color: #c2171a;
+}
+.main-page .main .catalog-news-page {
+  background: #fff;
+  padding-bottom: 100px;
+  border: 1px solid #dedede;
+}
+.main-page .main .catalog-news-page h1 {
+  padding-left: 10px;
+  margin-top: 50px;
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.main-page .main .catalog-news-page .column {
+  text-align: center;
+  padding: 0 10px;
+}
+.main-page .main .catalog-news-page .column p {
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 40px;
+  transition: color 0.2s linear;
+}
+.main-page .main .catalog-news-page .column p:hover {
+  color: #c2171a;
+}
+.main-page .main .buyers h1 {
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.main-page .main .buyers .buyers-main-page {
+  background: #fff;
+  border: 1px solid #dedede;
+  padding: 10px;
+}
+.main-page .main .buyers .buyers-main-page p {
+  margin: 10px 0;
+  font-size: 17px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.main-page .main .buyers .buyers-main-page h2 {
+  font-size: 24px;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  margin: 50px 0;
+  line-height: 1.4;
+}
+.main-page .main .buyers .buyers-main-page ul li {
+  list-style: disc;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  font-size: 17px;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.main-page .main .catalog-buyers-page {
+  background: #fff;
+  padding-bottom: 100px;
+  border: 1px solid #dedede;
+}
+.main-page .main .catalog-buyers-page h1 {
+  padding-left: 10px;
+  margin-top: 50px;
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.main-page .main .catalog-buyers-page .column {
+  text-align: center;
+  padding: 0 10px;
+}
+.main-page .main .catalog-buyers-page .column p {
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 40px;
+  transition: color 0.2s linear;
+}
+.main-page .main .catalog-buyers-page .column p:hover {
+  color: #c2171a;
+}
+.main-page .main .contacts-page h1 {
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.main-page .main .contacts-page .contacts-main-content {
+  background: #fff;
+  border: 1px solid #dedede;
+  padding: 10px;
+}
+.main-page .main .contacts-page .contacts-main-content h2 {
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Roboto", serif;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.main-page .main .contacts-page .contacts-main-content h2:first-child {
+  margin-top: 30px;
+}
+.main-page .main .contacts-page .contacts-main-content p {
+  font-size: 16px;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.main-page .main .contacts-page .contacts-main-content .map {
+  width: 100%;
+}
+.main-page .main .catalog-contacts-page {
+  background: #fff;
+  padding-bottom: 100px;
+  border: 1px solid #dedede;
+}
+.main-page .main .catalog-contacts-page h1 {
+  padding-left: 10px;
+  margin-top: 50px;
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.main-page .main .catalog-contacts-page .column {
+  text-align: center;
+  padding: 0 10px;
+}
+.main-page .main .catalog-contacts-page .column p {
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 40px;
+  transition: color 0.2s linear;
+}
+.main-page .main .catalog-contacts-page .column p:hover {
+  color: #c2171a;
+}
+.main-page .main .features {
+  padding: 30px;
+  background: url(../img/features/bg.png) center top/cover no-repeat;
+}
+.main-page .main .features .features-item {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+}
+.main-page .main .features .img {
+  display: flex;
+  justify-content: center;
+}
+.main-page .main .features p {
+  font-size: 22px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.main-page .main .order {
+  background: #fff;
+}
+.main-page .main .order h1 {
+  padding-left: 15px;
+  font-size: 40px;
+  margin: 40px 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.main-page .main .order .item h1 {
+  font-weight: 700;
+  font-family: "Roboto", serif;
+  padding-left: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+.main-page .main .order .item p {
+  padding-bottom: 0;
+  padding-top: 0;
+  font-size: 25px;
+  font-family: "Roboto Slab", serif;
+  text-transform: uppercase;
+  padding-left: 0;
+  font-weight: 300;
+}
+.main-page .main .order .item p a {
+  color: #000;
+  transition: color 0.2s linear;
+}
+.main-page .main .order .item p a:hover {
+  color: #c2171a;
+}
+.main-page .main .order .item p a:hover span {
+  border-bottom: 1px solid #c2171a;
+}
+.main-page .main .order .item p a span {
+  border-bottom: 1px solid #000;
+}
+.main-page .main .order p {
+  padding-bottom: 60px;
+  font-size: 14px;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  padding-top: 35px;
+  padding-left: 15px;
+}
+.main-page .main .shop {
+  font-family: "Roboto", serif;
+  background: #fff;
+}
+.main-page .main .shop .header-shop h1 {
+  padding-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.main-page .main .shop .header-shop p {
+  font-size: 21px;
+  line-height: 1.6;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+.main-page .main .shop .row {
+  padding-top: 30px;
+}
+.main-page .main .shop .row .list:before {
+  content: "";
+  width: 30px;
+  height: 5px;
+  background-color: #c2171a;
+  position: absolute;
+}
+.main-page .main .shop .row p {
+  padding-left: 50px;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+.main-page .main .shop form {
+  background: #292b30;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.main-page .main .shop form input[type=name], .main-page .main .shop form input[type=phone], .main-page .main .shop form input[type=email] {
+  padding: 10px;
+  margin-bottom: 17px;
+}
+.main-page .main .shop form textarea {
+  resize: none;
+  height: 100px;
+  padding: 10px;
+}
+.main-page .main .shop form h1 {
+  margin-bottom: 20px;
+  padding-left: 0;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.main-page .main .shop form button {
+  width: 165px;
+  margin: 20px auto;
+  padding: 11px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #c2171a;
+}
+.main-page .main .shop form button:hover {
+  background: #901012;
+}
+.main-page .main .shop form p {
+  font-size: 12px !important;
+  color: #fff;
+  line-height: 1.4 !important;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/*main-page*/
+.advertise {
+  padding: 30px 0 65px 0;
+  background: url(../img/advert.jpg) center center/cover no-repeat;
+}
+.advertise h1 {
+  margin: 40px 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.advertise .row {
+  text-align: center;
+}
+.advertise .row p {
+  margin-top: 10px;
+  font-size: 22px;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.advertise .row h1 {
+  margin: 0;
+  font-size: 60px;
+  color: #c2171a;
+  font-weight: 700;
+}
+
+/*advertise*/
+.footer {
+  background: #292b30;
+  padding: 50px;
+}
+.footer .important p {
+  color: #989898;
+  font-family: "Roboto", serif;
+  padding-bottom: 10px;
+  line-height: 1.4;
+}
+.footer .important h1 {
+  padding-top: 20px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Roboto", serif;
+}
+.footer .footer-nav {
+  display: flex;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+}
+.footer .footer-nav ul {
+  margin-right: 30px;
+}
+.footer .footer-nav ul li {
+  display: flex;
+  padding: 7px 0;
+}
+.footer .footer-nav ul li:first-child {
+  padding-top: 0;
+}
+.footer .footer-nav ul li a {
+  border: 0.5px solid transparent;
+  color: #fff;
+  transition: color 0.2s linear, border-bottom 0.2s linear;
+}
+.footer .footer-nav ul li a:hover {
+  border-bottom: 0.5px solid #c2171a;
+  color: #c2171a;
+}
+.footer .footer-nav ul li:last-child {
+  padding-bottom: 0;
+}
+.footer .footer-nav ul li:before {
+  content: "";
+  position: relative;
+  width: 5px;
+  height: 5px;
+  display: block;
+  background-color: #989898;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.footer .useful {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  width: 290px;
+}
+.footer .useful .item {
+  margin-top: 20px;
+  display: flex;
+}
+.footer .useful .item:first-child {
+  margin-top: 10px;
+}
+.footer .useful .item img {
+  width: 19px;
+  margin: 0 15px;
+}
+.footer .useful .text {
+  color: #fff;
+  padding: 0 15px;
+}
+
+/*************************/
+/*******MAIN-SLIDER*******/
+/*************************/
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+.slick-arrow {
+  font-size: 0;
+  background: transparent;
+  display: block;
+  width: 40px;
+  height: 90px;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  z-index: 10000;
+  opacity: 0.5;
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+  left: 10px;
+  background: url(../img/left.png) center center/contain no-repeat;
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+  right: 10px;
+  background: url(../img/right.png) center center/contain no-repeat;
+}
+
+/* Стрелка не активная */
+/* Точки (булиты) */
+.slick-dots {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -67.5px;
+}
+
+.slick-dots li {
+  margin: 0 20px;
+}
+
+/* Активная точка */
+.slick-dots li.slick-active {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+.slick-dots li.slick-active button {
+  background: transparent;
+}
+
+/* Элемент точки */
+.slick-dots li button {
+  font-size: 0;
+  width: 7px;
+  height: 7px;
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  border-radius: 50%;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-height: 450px;
+}
+
+/*burger*/
+.burger {
+  margin-left: 50px;
+  display: none;
+  width: 50px;
+  margin-top: 40px;
+  min-height: 50px;
+  position: relative;
+}
+.burger span {
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+}
+.burger span:before, .burger span:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+}
+.burger span:before {
+  top: 18.5px;
+}
+.burger span:after {
+  top: 37px;
+}
+
+/***************************/
+/*********MEDIA*************/
+/***************************/
+@media (max-width: 1170px) {
+  .header .header-menu .nav ul li {
+    padding: 30px 9px;
+  }
+
+  .main-page .main .dream .dream2, .main-page .main .dream .dream3 {
+    margin-left: -2px;
+  }
+
+  .main-page .sidebar .news .new p {
+    font-size: 17px;
+  }
+
+  .main-page .sidebar .news h6 {
+    font-size: 14px;
+  }
+
+  .main-page .sidebar .news h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 991.98px) {
+  .burger {
+    display: flex;
+  }
+
+  .header-menu .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header-menu .container .col-3 {
+    padding-left: 0;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    background: #1b1b1b;
+    z-index: 999999;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s linear;
+  }
+  .nav ul {
+    flex-direction: column;
+    padding-left: 40px;
+  }
+  .header .header-menu .nav ul li a {
+    display: none;
+    font-size: 20px;
+  }
+
+  .header .header-menu .nav ul li:hover {
+    background: transparent;
+  }
+
+  .nav.active {
+    height: 500px;
+  }
+
+  .header .header-menu .nav.active ul li a {
+    display: flex;
+  }
+
+  .header .header-top .ad .item p {
+    font-size: 20px !important;
+  }
+
+  .header .header-menu .purchase p {
+    font-size: 16px;
+  }
+
+  .main-page .main .order p {
+    font-size: 16px;
+  }
+
+  .main-page .main .shop form p {
+    font-size: 13px !important;
+  }
+
+  .main-page .sidebar .services .service .hover-content {
+    left: 0;
+    width: 100%;
+  }
+
+  .sidebar .services {
+    height: 500px;
+    overflow: hidden;
+    overflow: auto;
+  }
+
+  .main-page .sidebar .services .service svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .main-page .sidebar .services .service p {
+    font-size: 22px;
+    padding-left: 100px;
+  }
+
+  .main-page .sidebar .services .service:hover .hover-content {
+    display: none;
+  }
+
+  .main-page .sidebar .news h6 {
+    font-size: 16px;
+  }
+
+  .main-page .sidebar .news .new p {
+    font-size: 20px;
+  }
+
+  .main-page .sidebar .clause {
+    text-align: center;
+  }
+
+  .advertise .row h1 {
+    font-size: 40px;
+  }
+
+  .advertise .row p {
+    font-size: 20px;
+  }
+
+  .footer .footer-nav {
+    flex-direction: column;
+  }
+  .footer .footer-nav ul {
+    margin-top: 40px;
+  }
+  .footer .footer-nav ul:first-child {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-page .main .catalog-contacts-page h1 {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .main-page .main .catalog-contacts-page {
+    padding-bottom: 0;
+  }
+
+  .main-page .main .about h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .row .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-page .main .features .img {
+    height: 70px;
+  }
+
+  .header .header-top .ad h1 {
+    font-size: 29px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .main-page .main .about .catalog .column p {
+    padding-bottom: 10px;
+  }
+
+  .slick-dots {
+    margin-left: -118.5px;
+  }
+
+  .main-page .main .about .catalog h1 {
+    margin-top: 30px;
+  }
+
+  .main-page .main .dream .dream1 {
+    background: #c2171a;
+    text-align: center;
+  }
+
+  .main-page .main .dream .dream2 {
+    background: #2a2b30;
+    display: flex;
+    justify-content: center;
+  }
+  .main-page .main .dream .dream2 p {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .main-page .main .dream .dream3 button {
+    margin: 15px 0;
+  }
+
+  .main-page .main .order h1 {
+    font-size: 40px;
+  }
+
+  .item {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .main-page .main .order .order-top {
+    font-size: 27px;
+    text-align: center;
+  }
+
+  .main-page .main .shop form {
+    margin-bottom: 40px;
+  }
+
+  .adv-item {
+    margin: 10px 0;
+  }
+
+  .advertise h1 {
+    margin: 30px 0;
+  }
+
+  .advertise {
+    padding-bottom: 40px;
+  }
+
+  .important {
+    margin-bottom: 40px;
+  }
+
+  .footer .footer-nav ul li a {
+    font-size: 16px;
+  }
+
+  .footer .useful .text {
+    text-align: left;
+  }
+
+  .main-page .main .dream .dream2 p {
+    margin-right: 0;
+  }
+
+  .main-page .main .catalog-news-page h1 {
+    font-size: 27px;
+  }
+
+  .main-page .main .about .catalog .column p {
+    margin: 0;
+  }
+
+  .main-page .main .catalog-news-page {
+    padding-bottom: 0;
+  }
+
+  .main-page .main .catalog-news-page .column p {
+    padding-bottom: 10px;
+  }
+
+  .main-page .main .catalog-news-page h1 {
+    text-align: center;
+  }
+
+  .main-page .main .catalog-buyers-page {
+    padding-bottom: 0;
+  }
+
+  .main-page .main .catalog-buyers-page .column p {
+    padding-bottom: 10px;
+  }
+
+  .main-page .main .catalog-buyers-page h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .main-page .main .catalog-contacts-page .column p {
+    padding-bottom: 10px;
+  }
+
+  .main-page .main .catalog-news-page {
+    padding-bottom: 0;
+  }
+
+  .item img {
+    height: 40px;
+  }
+
+  .main-page .main .catalog-news-page h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .slick-arrow {
+    width: 20px;
+    height: 60px;
+  }
+
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .main-page .main .features {
+    padding: 5px;
+  }
+
+  .main-page .main .features p {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .col-12.shop-row {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-page .main .shop form {
+    padding: 20px;
+  }
+
+  .main-page .main .shop form input[type=name], .main-page .main .shop form input[type=phone], .main-page .main .shop form input[type=email] {
+    padding: 20px 10px;
+  }
+
+  .main-page .main .shop form textarea {
+    height: 150px;
+  }
+
+  .about-useful {
+    flex-direction: column;
+    justify-content: center !important;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+
+  .footer .useful .item img {
+    height: 30px;
+  }
+
+  .useful {
+    margin-top: 20px;
+  }
+
+  .footer .useful .text {
+    font-size: 16px;
+  }
+
+  .footer .important p {
+    font-size: 16px;
+  }
+
+  .header-shop {
+    text-align: center;
+  }
+
+  .main-page .main .catalog-news-page .column p {
+    padding-bottom: 10px;
+  }
+
+  .footer .useful .text {
+    max-width: 200px;
+  }
+}
+@media (max-width: 340px) {
+  .main-page .sidebar .services .service p {
+    font-size: 18px;
+  }
+
+  .burger {
+    margin-left: 0;
+  }
+
+  .main-page .main .catalog-news-page h1 {
+    font-size: 17px;
+  }
+
+  .main-page .main .catalog-news-page h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .main-page .main .catalog-news-page .column p {
+    padding-bottom: 10px;
+  }
+}
